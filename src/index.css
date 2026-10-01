@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Garamond, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-olive: #283628;
+  --color-olive-deep: #1c271c;
+  --color-olive-light: #3a4c3a;
+  --color-sage: #586b58;
+
+  --color-paper: #fbfbf9;
+  --color-paper-warm: #faf9f5;
+  --color-stone-light: #f4f4ee;
+  --color-stone-muted: #ecece6;
+  --color-stone-border: #e2e2dc;
+
+  --color-graphite: #1c1d20;
+  --color-graphite-soft: #2b2c30;
+  --color-graphite-muted: #5e626b;
+  --color-graphite-subtle: #8c8f96;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+
+  /* Editorial Titles in Cormorant Garamond: Sculptural, slender and free of heavy brutalism */
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    font-weight: 300;
+  }
+
+  h2 {
+    letter-spacing: -0.028em;
+    line-height: 1.15;
+    font-weight: 400;
+  }
+
+  h3 {
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    font-weight: 500;
+  }
+
+  /* Editorial Italic Accents */
+  .font-display em,
+  .font-display i,
+  .editorial-italic {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+
+  /* Clean contrast for paragraph copy */
+  p {
+    font-family: var(--font-sans);
+    letter-spacing: -0.005em;
+  }
+
+  /* Precision tabular & uppercase micro-labels */
+  .font-mono {
+    font-feature-settings: "tnum" 1;
+  }
+
+  [class*="tracking-widest"],
+  [class*="tracking-wider"] {
+    letter-spacing: 0.1em;
+  }
+}
+
+/* Editorial helper utilities */
+@utility editorial-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+}
+
+@utility editorial-subheading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+@utility editorial-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+}
+
+@utility editorial-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-olive);
+}
+
+@utility editorial-lead {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-graphite-muted);
+}
+
+/* Subtle, refined scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d8d0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8b8b0;
+}

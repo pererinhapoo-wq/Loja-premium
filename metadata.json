@@ -1,0 +1,6 @@
+{
+  "name": "FORMA Concept Store",
+  "description": "Concept store contemporânea de design, tecnologia e moda. Escolhas que definem seu espaço.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
